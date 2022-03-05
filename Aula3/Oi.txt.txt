@@ -1,0 +1,3 @@
+Olá
+No VSCode, aparece uma sigla, falando como está o arquivo do git, Untracked / Added / Modified
+p o GitHub, usar comando "git remote add origin (link do repositório)

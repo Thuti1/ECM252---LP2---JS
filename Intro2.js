@@ -88,7 +88,128 @@
 // const res = soma (2, 3)
 // console.log (res)
 
-//Completar aula 1
+// const dobro = function (n) {
+//     return n * 2;
+// };
+// const res = dobro(4);
+// console.log(res);
+// //valor padrão para o parâmetro
+// const triplo = function (n = 5) {
+//     return 3 * n;
+// };
+// console.log(triplo());
+// console.log(triplo(10));
+
+// const hello = () => console.log("Hello");
+// hello();
+// const dobro = (valor) => valor * 2;
+// console.log(dobro(10));
+// const triplo = (valor) => {
+//     return valor * 3;
+// };
+// console.log(triplo(10));
+// //e agora?
+// const ehPar = (n) => {
+//     n % 2 == 0;
+// };
+// console.log(ehPar(10));
+
+/*uma função pode ser atribuída
+a uma variável*/
+// let umaFuncao = function () {
+//     console.log ("Fui armazenada em uma variável");
+// }
+// //e pode ser chamada assim
+// umaFuncao()
+// /*f recebe uma função como parâmetro e, por isso
+// é uma função de alta ordem.
+// Por devolver uma função, g também é de alta ordem.
+// */
+// function f (funcao) {
+//     //chamando a função
+//     //note como a tipagem dinâmica tem seu preço
+//     funcao()
+// }
+// function g () {
+//     function outraFuncao(){
+//         console.log("Fui criada por g");
+//     }
+//     return outraFuncao;
+// }
+// //f pode ser chamada assim
+// f (function (){
+//     console.log ('Estou sendo passada para f')
+// })
+// //e g pode ser chamada assim
+// const gResult = g()
+// gResult()
+// //e assim também
+// g()()
+// //outros testes
+// /* f chama g, que somente devolve uma função.
+// Nada é exibido.*/
+// f(g)
+// /*f chama a função devolvida por g.
+// "Fui criada por g" é exibido.*/
+// f(g())
+// /*f tenta chamar o que a função criada por g
+// devolve. Ela não devolve coisa alguma. Por isso,
+// um erro - somente em tempo de execução - acontece. */
+// f(g()())
+//O que acontece?
+// f(1)
+    
+// function f () {
+//     let nome = 'João';
+//     function g () {
+//         console.log (nome);
+//     }
+//     g()
+// }
+// f()
+
+// function ola(){
+//     let nome = 'João';
+//     return function (){
+//         console.log ('Olá, João');
+//     }
+// }
+// let olaResult = ola();
+// /*perceba que aqui a função ola já terminou.
+// É de se esperar que a variável nome já não
+// possa ser acessada.*/
+// olaResult();
+// //também vale com parâmetros
+// function saudacoesFactory(saudacao, nome){
+//     return function (){
+//         console.log (saudacao + ', ' + nome);   
+//     }
+// }
+// let olaJoao = saudacoesFactory ('Olá', 'João');
+// let tchauJoao = saudacoesFactory('Tchau', 'João');
+// olaJoao();
+// tchauJoao();
+  
+// function eAgora(){
+//     let cont = 1;
+//     function f1 (){
+//         console.log (cont);
+//     }
+//     cont++;
+//     function f2 (){
+//         console.log (cont);
+//     }
+//     //JSON contendo as duas funções
+//     return {f1, f2}
+// }
+// let eAgoraResult = eAgora();
+// /* neste momento, a funcao eAgora já
+// executou por completo e a variável
+// cont já foi incrementada. Seu valor final
+// é mantido e, assim, ambas f1 e f2 exibirão 2.
+// */
+// eAgoraResult.f1();
+// eAgoraResult.f2();
 
 // AULA 2 ----------------------
 
